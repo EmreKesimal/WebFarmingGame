@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 export default function LogIn(){
     const router = useRouter();
     function handleAuthNavigation(){
-        router.push("../pages/signup")
+        router.push("/auth/pages/signup")
     }
     return(
         <div className={styles.container}>

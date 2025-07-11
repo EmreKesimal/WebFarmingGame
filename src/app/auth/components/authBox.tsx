@@ -29,7 +29,8 @@ export default function AuthBox({ isLogin }: { isLogin: boolean }) {
   }
 
   function navigateToApp(){
-    router.push("../../game")
+    router.push("/game");
+
   }
   return (
     <div className={styles.container}>
