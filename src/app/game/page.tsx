@@ -16,34 +16,45 @@ const [flowerStates, setFlowerStates] = useState<FlowerStage[]>(
 function grow(index: number) {
   if (flowerStates[index] !== null) return;
 
-  const newStates = [...flowerStates];
-  newStates[index] = "T";
-  setFlowerStates(newStates);
+  setFlowerStates((prev) => {
+    const copy = [...prev];
+    copy[index] = "T";
+    return copy;
+  });
 
   setTimeout(() => {
-    const s = [...flowerStates];
-    s[index] = "F";
-    setFlowerStates(s);
+    setFlowerStates((prev) => {
+      const copy = [...prev];
+      copy[index] = "F";
+      return copy;
+    });
   }, 2000);
 
   setTimeout(() => {
-    const s = [...flowerStates];
-    s[index] = "B";
-    setFlowerStates(s);
+    setFlowerStates((prev) => {
+      const copy = [...prev];
+      copy[index] = "B";
+      return copy;
+    });
   }, 4000);
 
   setTimeout(() => {
-    const s = [...flowerStates];
-    s[index] = "Ç";
-    setFlowerStates(s);
+    setFlowerStates((prev) => {
+      const copy = [...prev];
+      copy[index] = "Ç";
+      return copy;
+    });
   }, 6000);
 
   setTimeout(() => {
-    const s = [...flowerStates];
-    s[index] = "K";
-    setFlowerStates(s);
+    setFlowerStates((prev) => {
+      const copy = [...prev];
+      copy[index] = "K";
+      return copy;
+    });
   }, 10000);
 }
+
 
 
   return(
