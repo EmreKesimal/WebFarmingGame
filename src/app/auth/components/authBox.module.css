@@ -4,4 +4,16 @@
     border-color: black solid;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border: black solid 1px;
+    background-color: beige;
+    border-radius: 12px;
+    box-Shadow: "0px 4px 10px rgba(0, 0, 0, 0.1)",
+    
+}
+.btn{
+    width: 100px;
+    height: 40px;
 }

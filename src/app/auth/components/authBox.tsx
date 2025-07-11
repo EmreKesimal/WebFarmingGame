@@ -47,7 +47,7 @@ export default function AuthBox({ isLogin }: { isLogin: boolean }) {
         value={password}
         onChange={(e) => setPassword(e.target.value)}/>
       
-      <button onClick={isLogin ? handleLogin : handleSignup}>{isLogin ? "Log In" : "Sign Up"}</button>
+      <button className={styles.btn} onClick={isLogin ? handleLogin : handleSignup}>{isLogin ? "Log In" : "Sign Up"}</button>
     </div>
   );
 }
