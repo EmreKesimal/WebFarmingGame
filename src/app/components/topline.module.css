@@ -1,0 +1,28 @@
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.balanceTag{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(73, 73, 244);
+    border: black solid 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.storeButton{
+    width: 200px;
+    height: 50px;
+    background-color: rgb(73, 73, 244);
+    border: black solid 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
