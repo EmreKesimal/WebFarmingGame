@@ -3,10 +3,14 @@ import "./globals.css";
 import BalanceProvider from "./balanceProvider";
 import type { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Flower Game",
-  description: "Farming game with flowers",
+export const metadata = {
+  title: "Farming Garden",
+  description: "Grow flowers and earn coins!",
+  icons: {
+    icon: "/Tulip.png"
+  }
 };
+
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (

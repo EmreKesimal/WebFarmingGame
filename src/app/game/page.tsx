@@ -16,7 +16,7 @@ export default function Home() {
 
   const flowerRewards: Record<string, number> = {
     Papatya: 20,
-    Lale: 70
+    Lale: 30
   };
 
   const [flowerStates, setFlowerStates] = useState<FlowerStage[]>(Array(16).fill(null));
