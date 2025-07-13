@@ -9,24 +9,36 @@ export default function AuthBox({ isLogin }: { isLogin: boolean }) {
   const [password, setPassword] = useState('');
   const router = useRouter(); 
 
-  function handleLogin(){
-    const storedEmail = localStorage.getItem("email")
-    const storedPassword = localStorage.getItem("password")
-    if(storedEmail == email && storedPassword == password){
-      navigateToApp();
+  function handleLogin() {
+    const storedUser = localStorage.getItem("user");
+  
+    if (!storedUser) {
+      alert("No user found");
+      return;
     }
-    else{
-      alert("Wrong password or email")
+  
+    const { email: storedEmail, password: storedPassword } = JSON.parse(storedUser);
+  
+    if (storedEmail === email && storedPassword === password) {
+      navigateToApp();
+    } else {
+      alert("Wrong password or email");
     }
   }
+  
 
-  function handleSignup(){
-    localStorage.setItem('email', email);
-    localStorage.setItem('password', password);
-
+  function handleSignup() {
+    const user = {
+      email,
+      password
+    };
+  
+    localStorage.setItem('user', JSON.stringify(user));
+  
     alert('Saved to LocalStorage');
     navigateToApp();
   }
+  
 
   function navigateToApp(){
     router.push("/game");
@@ -34,14 +46,17 @@ export default function AuthBox({ isLogin }: { isLogin: boolean }) {
   }
   return (
     <div className={styles.container}>
-      {isLogin ? <h1>Log In</h1> : <h1>Sign Up</h1>}
+      <h1 className={styles.title}>{isLogin ? "Log In" : "Sign Up"}</h1>
+
 
       <input 
+        className={styles.customInput}
         type="email" 
         placeholder="Enter your email" 
         value={email}
         onChange={(e) => setEmail(e.target.value)}/>
       <input 
+        className={styles.customInput}
         type="password" 
         placeholder="Enter your password" 
         value={password}

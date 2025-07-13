@@ -9,8 +9,9 @@ export default function Signup(){
   }
     return(
         <div className={styles.container}>
+            <h1 className={styles.title}>Farming Garden</h1>
             <AuthBox isLogin = {false} />
-            <button onClick={handleAuthNavigation}> You Already Have an Account?</button>
+            <button className={styles.btn} onClick={handleAuthNavigation}> You Already Have an Account?</button>
         </div>
     )
 }

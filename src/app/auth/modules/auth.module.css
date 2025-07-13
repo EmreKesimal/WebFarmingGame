@@ -1,8 +1,41 @@
-.container{
+.container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    gap: 8px;
     margin-top: 80px;
-}
+    gap: 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: 'Poppins', 'Inter', sans-serif;
+    text-align: center;
+    color: #4F46E5;
+    letter-spacing: 1px;
+    margin: 0;
+    padding: 16px 0;
+  }
+  
+  
+  .btn {
+    width: 220px;
+    padding: 12px;
+    margin-top: 16px;
+    background-color: gray; 
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .btn:hover {
+    background-color: #4338ca;
+  }
+  
+  

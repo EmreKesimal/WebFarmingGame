@@ -30,3 +30,46 @@
 .exitButton:hover {
   background-color: #b71c1c;
 }
+.actionArea {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+}
+
+.actionButton {
+  padding: 12px 24px;
+  background-color: #4F46E5;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: #4338ca;
+}
+.inventoryBox {
+  position: absolute;
+  top: 80px;
+  left: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 16px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  font-size: 14px;
+  color: #333;
+  width: 240px;
+  text-align: left;
+}
+
+.inventoryBox ul {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 8px;
+}
+.inventoryBox li {
+  margin-bottom: 6px;
+}

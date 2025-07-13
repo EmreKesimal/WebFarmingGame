@@ -15,7 +15,7 @@ export default function Store() {
 
   function handleBuy(flowerName: "Papatya" | "Lale", price: number) {
     if (balance < price) {
-      alert("Yetersiz bakiye!");
+      alert("Insufficient Balance!");
       return;
     }
 
@@ -32,17 +32,28 @@ export default function Store() {
 
   return (
     <div className={styles.container}>
-        <h2>Bakiye: {balance}</h2>
+    <h2>Balance: {balance}</h2>
+    <div className={styles.inventoryBox}>
+      <p>Your Inventory:</p>
+      <ul>
+        <li>🌼 Papatya: {flowerInventory["Papatya"]}</li>
+        <li>🌷 Lale: {flowerInventory["Lale"]}</li>
+      </ul>
+    </div>
 
-        <div className={styles.cards}>
-            <Card name="Papatya" price={10} onBuy={() => handleBuy("Papatya", 10)} />
-            <Card name="Lale" price={15} onBuy={() => handleBuy("Lale", 15)} />
-        </div>
-
-        <button onClick={handleNavigationBack} className={styles.exitButton}>
-            Exit
-        </button>
-        </div>
+  
+    <div className={styles.cards}>
+      <Card name="Papatya" price={10} onBuy={() => handleBuy("Papatya", 10)} />
+      <Card name="Lale" price={15} onBuy={() => handleBuy("Lale", 15)} />
+    </div>
+  
+    <div className={styles.actionArea}>
+      <button onClick={handleNavigationBack} className={styles.actionButton}>
+        Start to a New Day
+      </button>
+    </div>
+  </div>
+  
 
   );
 }

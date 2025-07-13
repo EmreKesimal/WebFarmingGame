@@ -1,28 +1,49 @@
-.container{
+.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.balanceTag{
-    width: 200px;
-    height: 50px;
+    width: 100%;
+    padding: 10px 16px;
+    box-sizing: border-box;
+  }
+  
+  .balanceTag {
+    width: 180px;
+    height: 40px;
     background-color: rgb(73, 73, 244);
+    color: white;
+    font-weight: bold;
     border: black solid 1px;
-    border-radius: 10px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.storeButton{
-    width: 200px;
-    height: 50px;
+  }
+  
+  .storeButton {
+    width: 120px;
+    height: 40px;
     background-color: rgb(73, 73, 244);
+    color: white;
+    font-weight: bold;
     border: black solid 1px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    border-radius: 8px;
+    cursor: pointer;
+  }
 
+  .buttonGroup {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .logoutButton {
+    width: 120px;
+    height: 40px;
+    background-color: darkred;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  

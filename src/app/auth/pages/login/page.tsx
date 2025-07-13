@@ -9,8 +9,9 @@ export default function LogIn(){
     }
     return(
         <div className={styles.container}>
+            <h1 className={styles.title}>Farming Garden</h1>
             <AuthBox isLogin = {true} />
-            <button onClick={handleAuthNavigation}> You Dont Have a Account?</button>
+            <button className = {styles.btn} onClick={handleAuthNavigation}> You Dont Have a Account?</button>
         </div>
     )
 }
